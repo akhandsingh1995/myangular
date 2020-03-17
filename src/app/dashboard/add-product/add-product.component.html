@@ -1,0 +1,70 @@
+<app-header></app-header>
+
+<body>
+    <div class="container-fluid bgimg">
+        <div class="container-fluid margin">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <header class="card-header">
+                            <h4 class="card-title mt-2"> Add-Product </h4>
+                        </header>
+                        <article class="card-body">
+                            <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+
+                                <div class="form-row">
+                                    <div class="col form-group">
+                                        <label> ProductName </label>
+                                        <input type="text" formControlName="p_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && p_name.errors }" />
+                                        <div *ngIf="submitted && p_name.errors" class="invalid-feedback">
+                                            <div *ngIf="p_name.errors.required"> ProductName is required </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col form-group">
+                                        <label> ProductDesc </label>
+                                        <input type="text" formControlName="p_desc" class="form-control" [ngClass]="{ 'is-invalid': submitted && p_desc.errors }" />
+                                        <div *ngIf="submitted && p_desc.errors" class="invalid-feedback">
+                                            <div *ngIf="p_desc.errors.required"> ProductDesc is required </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label> ProductImage </label>
+                                    <input type="text" formControlName="p_image" class="form-control" [ngClass]="{ 'is-invalid': submitted && p_image.errors }" />
+                                    <div *ngIf="submitted && p_image.errors" class="invalid-feedback">
+                                        <div *ngIf="p_image.errors.required"> LastName is required </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label> Reviews </label>
+                                    <input type="text" formControlName="reviews" class="form-control" [ngClass]="{ 'is-invalid': submitted && reviews.errors }" />
+                                    <div *ngIf="submitted && reviews.errors" class="invalid-feedback">
+                                        <div *ngIf="reviews.errors.required"> LastName is required </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-row">
+                                    <div class="col form-group">
+                                        <button class="btn btn-danger btn-block" routerLink="/dashboard/product"> Cancel </button>
+                                    </div>
+                                    <div class="col form-group">
+                                        <button type="submit" class="btn btn-success btn-block"> Submit </button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<app-footer></app-footer>

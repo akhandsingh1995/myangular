@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<table class="table">
+
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">UserId</th>
+            <th scope="col">First-Name</th>
+            <th scope="col">Last-Name</th>
+            <th scope="col">Email</th>
+            <th><button class="card-header btn-btn textcolor" routerLink="/dashboard/user/add-user"> Add New User </button></th>
+            <th>
+                <h2>Action</h2>
+            </th>
+        </tr>
+    </thead>
+
+    <tr *ngFor="let user of userData">
+        <td>{{user._id }}</td>
+        <td>{{user.f_name }}</td>
+        <td>{{user.l_name }}</td>
+        <td>{{user.email }}</td>
+        <td><button class="card-header btn-btn textcolor" (click)="onEditUser(user)"> Update User </button></td>
+        <td><button class="card-header btn-btn textcolor" (click)="onDeleteUser(user._id)"> Delete </button></td>
+
+    </tr>
+</table>
+
+<app-footer></app-footer>

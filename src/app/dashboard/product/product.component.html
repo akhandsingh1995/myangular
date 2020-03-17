@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ProductId</th>
+            <th scope="col">ProductName</th>
+            <th scope="col">P_Description</th>
+            <th scope="col">ProductImage</th>
+            <th scope="col">Reviews</th>
+            <th><button class="card-header btn-btn textcolor" routerLink="/dashboard/product/add-product"> Add New Product </button></th>
+            <th>
+                <h2>Action</h2>
+            </th>
+        </tr>
+    </thead>
+    <tr *ngFor="let product of data">
+        <td>{{product._id |json}}</td>
+        <td>{{product.p_name |json}}</td>
+        <td>{{product.p_desc |json}}</td>
+        <td>{{product.p_img |json}}</td>
+        <td>{{product.reviews |json}}</td>
+
+        <td><button class="card-header btn-btn textcolor" routerLink="/dashboard/product/edit-product" (click)="onEditProduct(product)"> Update Product </button></td>
+
+        <td><button class="card-header btn-btn textcolor" routerLink="/dashboard/product/delete" (click)="onDeleteProduct(product._id)"> Delete </button></td>
+
+    </tr>
+
+</table>
+
+<app-footer></app-footer>

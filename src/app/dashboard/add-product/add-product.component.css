@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bgimg {
+    background-image: url("../../../assets/user.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.decor {
+    text-decoration: none;
+    color: white;
+}
+
+.margin {
+    margin-top: 40px;
+}

@@ -1,0 +1,32 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bgimg {
+    background-image: url("../../assets/login.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.page {
+    margin-top: 150px;
+}
+
+.size {
+    border: 10px solid grey;
+}
+
+.padding {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.decor {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,19 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.div1 {
+    height: 70px;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+}
+
+.panel-heading {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+}

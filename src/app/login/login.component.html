@@ -1,0 +1,98 @@
+<!-- <a routerLink="/signup">signup</a>
+<br>
+<input type="text" id="name" [(ngModel)]="name" name="name"> TODO: remove this: {{name}} -->
+
+<body>
+    <div class="container-fluid bgimg">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4"></div>
+
+                <div class="col-sm-4">
+                    <div class="page">
+                        <div class="size">
+                            <div class="padding">
+                                <h2> Login </h2>
+
+                                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && email.errors }" required/>
+                                        <div *ngIf="submitted && email.errors" class="invalid-feedback">
+                                            <div *ngIf="email.errors.required">Email is required</div>
+                                            <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && password.errors }" />
+                                        <div *ngIf="submitted && password.errors" class="invalid-feedback">
+                                            <div *ngIf="password.errors.required">Password is required</div>
+                                            <div *ngIf="password.errors.minlength">Password must be at least 4 characters</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" type="submit"> Login </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a routerLink="/signup"> New-User Signup here </a>
+
+                                        <!-- Section Here -->
+                                        <div class="container">
+
+                                            <!-- Trigger the modal with a button -->
+                                            <a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Forgot Password</a>
+
+                                            <!-- Modal -->
+                                            <div class="modal" id="myModal" role="dialog">
+                                                <div class="modal-dialog">
+
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+
+                                                            <h4 class="modal-title"> Forgot Password </h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <input type="text" placeholder="Enter Valid Email">
+                                                        </div>
+                                                        <!-- <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        </div> -->
+
+                                                        <div class="form-row">
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <div class="col form-group">
+                                                                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <div class="col form-group">
+                                                                <button class="btn btn-success" type="submit">Submit</button>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>

@@ -1,0 +1,31 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.decor1 {
+    text-decoration: none;
+    color: white;
+}
+
+.decor2 {
+    text-decoration: none;
+    color: white;
+}
+
+.div1 {
+    height: 70px;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+}
+
+.div2 {
+    margin-left: 600px;
+    margin-top: 10px;
+    float: left;
+    position: relative;
+    height: 30px;
+}

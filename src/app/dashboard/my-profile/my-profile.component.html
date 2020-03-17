@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class=".col-xs-4 .col-md-offset-2">
+        <div class="panel panel-default panel-info Profile">
+            <div class="panel-heading">
+                <h2> My Profile: </h2>
+            </div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <form>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">First Name</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="text" name="firstName" placeholder="First Name" ng-model="me.firstName">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Last Name</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="text" name="lastName" placeholder="Last Name" ng-model="me.lastName">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="email" name="email" placeholder="Email" ng-model="me.email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Password</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="password" name="password" placeholder="Password" ng-model="me.password">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button class="btn btn-primary" ng-click="updateMe()">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- end form-horizontal -->
+            </div>
+            <!-- end panel-body -->
+
+        </div>
+        <!-- end panel -->
+
+
+    </div>
+    <!-- end size -->
+</div>
+<!-- end container-fluid -->
+
+
+<app-footer></app-footer>
